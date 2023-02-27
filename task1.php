@@ -7,6 +7,11 @@
     <title>Task 1</title>
 </head>
 <body>
+<?php
+
+include 'index.php';
+
+?>
 <form>
   <label for="name">Name:</label>
   <input type="text" id="name" name="name"><br>

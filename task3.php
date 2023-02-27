@@ -9,6 +9,7 @@
 <body>
 <?php
 
+include 'index.php';
 include 'classPerson.php';
 
 if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
@@ -23,13 +24,14 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
     echo '<h2>Name: ' . $person->getName() . '</h2>';
     echo '<h2>Email: ' . $person->getEmail() . '</h2>';
 }
+
 ?>
-	<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-		<label for="name">Name:</label>
-		<input type="text" name="name" id="name">
-		<label for="email">Email:</label>
-		<input type="email" name="email" id="email">
-		<input type="submit" value="Submit">
-	</form>
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+	<label for="name">Name:</label>
+	<input type="text" name="name" id="name"><br>
+    <label for="email">Email:</label>
+	<input type="email" name="email" id="email"><br>
+	<input type="submit" value="Submit"><br>
+</form>
 </body>
 </html>
